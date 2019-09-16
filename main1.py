@@ -4,6 +4,8 @@ import utils, open_color, arcade
 
 utils.check_version((3,7))
 
+x = 400
+y = 300
 # Open the window. Set the window title and dimensions (width and height)
 arcade.open_window(800, 600, "Smiley Face Example")
 arcade.set_background_color(open_color.white)
@@ -13,18 +15,18 @@ arcade.start_render()
 
 # Draw the smiley face:
 # (x,y,radius,color)
-arcade.draw_circle_filled(0, 0, 100, open_color.yellow_3)
+arcade.draw_circle_filled(x, y, 100, open_color.yellow_3)
 # (x,y,radius,color,border_thickness)
-arcade.draw_circle_outline(0, 0, 100, open_color.black,4)
+arcade.draw_circle_outline(x, y, 100, open_color.black,4)
 
 #(x,y,width,height,color)
-arcade.draw_ellipse_filled(0,0,15,25,open_color.black)
-arcade.draw_ellipse_filled(0,0,15,25,open_color.black)
-arcade.draw_circle_filled(0,0,3,open_color.gray_2)
-arcade.draw_circle_filled(0,0,3,open_color.gray_2)
+arcade.draw_ellipse_filled(x-25,y+20,15,25,open_color.black)
+arcade.draw_ellipse_filled(x+25,y+20,15,25,open_color.black)
+arcade.draw_circle_filled(x-21,y+25,3,open_color.gray_2)
+arcade.draw_circle_filled(x+29,y+25,3,open_color.gray_2)
 
 #(x,y,width,height,color,start_degrees,end_degrees,border_thickness)
-arcade.draw_arc_outline(0,0,60,50,open_color.black,190,350,4)
+arcade.draw_arc_outline(x,y,60,50,open_color.black,190,350,4)
 
 
 
